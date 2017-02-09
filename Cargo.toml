@@ -1,0 +1,11 @@
+[package]
+name = "mdo-future"
+version = "0.1.0"
+authors = ["Daniil Smirnov <danslapman@gmail.com>"]
+
+[dependencies]
+futures = "0.1.*"
+
+[dev-dependencies]
+mdo = "0.3"
+futures-cpupool = "0.1.*"

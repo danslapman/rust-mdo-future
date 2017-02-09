@@ -13,6 +13,9 @@ use futures::future::ok;
 use futures_cpupool::CpuPool;
 use mdo-future::future::{bind, ret};
 
+//....
+// Somewhere in code
+
 let pool = CpuPool::new_num_cpus();
 
 let get_num = ok::<u32, String>(42);
@@ -25,4 +28,6 @@ let res = mdo! {
 let val = pool.spawn(res);
 
 assert_eq!(val.wait().unwrap(), 84);
+
+//....
 ```

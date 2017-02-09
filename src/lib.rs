@@ -26,10 +26,12 @@ mod tests {
         let pool = CpuPool::new_num_cpus();
 
         let get_num = ok::<u32, String>(42);
+        let get_factor = ok::<u32, String>(2);
 
         let res = mdo! {
             arg =<< get_num;
-            ret ret(arg * 2)
+            fact =<< get_factor;
+            ret ret(arg * fact)
         };
 
         let val = pool.spawn(res);

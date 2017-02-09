@@ -2,6 +2,11 @@
 name = "mdo-future"
 version = "0.1.0"
 authors = ["Daniil Smirnov <danslapman@gmail.com>"]
+homepage = "https://github.com/danslapman/rust-mdo-future"
+repository = "https://github.com/danslapman/rust-mdo-future"
+description = "Zero-cost futures support for rust-mdo"
+keywords = ["monad", "do", "future"]
+license = "WTFPL"
 
 [dependencies]
 futures = "0.1.*"

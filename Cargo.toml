@@ -1,6 +1,6 @@
 [package]
 name = "mdo-future"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Daniil Smirnov <danslapman@gmail.com>"]
 homepage = "https://github.com/danslapman/rust-mdo-future"
 repository = "https://github.com/danslapman/rust-mdo-future"

@@ -158,8 +158,8 @@ mod tests {
     }
 
     // Generate a stream from start (inclusive) to end (exclusive)
-    fn stream_range(start: u32, end: u32) -> stream::BoxStream<u32, String> {
-        stream::iter((start..end).map(Ok::<u32, String>)).boxed()
+    fn stream_range(start: u32, end: u32) -> Box<stream::Stream<Item = u32, Error = String> + Send> {
+        Box::new(stream::iter_result((start..end).map(Ok::<u32, String>)))
     }
 
     // execute the stream on a CpuPool and return a future of the
